@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Game1.Screens;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Game1
 {
@@ -14,8 +16,12 @@ namespace Game1
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
-                game.Run();
+            // Spashscreen;
+
+            using(ScreenManager.CurrentGame = new TheGame())
+            {
+                ScreenManager.CurrentGame.Run();
+            }
         }
     }
 #endif
